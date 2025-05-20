@@ -15,18 +15,81 @@
       name="generator"
       content={Astro.generator}
     />
-    <title>Astro Basics</title>
+    <title>thisguyvims</title>
   </head>
   <body>
     <slot />
   </body>
 </html>
 
-<style>
-  html,
-  body {
+<style is:global>
+  /* border radius */
+  :root {
+    --radius-s: 0.2rem;
+    --radius-m: 0.3rem;
+    --radius-l: 0.5rem;
+    --radius-xl: 1rem;
+    --radius-xxl: 2rem;
+    --radius-full: 50%;
+  }
+
+  /* Catppuccin colorscheme */
+  :root {
+    --color-base: #1e1e2e;
+    --color-blue: #89b4fa;
+    --color-crust: #11111b;
+    --color-flamingo: #f2cdcd;
+    --color-green: #a6e3a1;
+    --color-lavender: #b4befe;
+    --color-mantle: #181825;
+    --color-maroon: #eba0ac;
+    --color-mauve: #cba6f7;
+    --color-overlay-0: #6c7086;
+    --color-overlay-1: #7f849c;
+    --color-overlay-2: #9399b2;
+    --color-peach: #fab387;
+    --color-pink: #f5c2e7;
+    --color-red: #f38ba8;
+    --color-rosewater: #f5e0dc;
+    --color-sapphire: #74c7ec;
+    --color-sky: #89dceb;
+    --color-subtext-0: #a6adc8;
+    --color-subtext-1: #bac2de;
+    --color-surface-0: #313244;
+    --color-surface-1: #45475a;
+    --color-surface-2: #585b70;
+    --color-teal: #94e2d5;
+    --color-text: #cdd6f4;
+    --color-yellow: #f9e2af;
+  }
+
+  :root {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: dark;
+    color: var(--color-text);
+    background-color: var(--color-base);
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
     margin: 0;
     width: 100%;
     height: 100%;
+  }
+
+  body {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    margin: 0;
+    min-height: 100dvh;
+    min-width: 100dvw;
+    place-items: center;
   }
 </style>
