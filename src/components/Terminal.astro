@@ -1,13 +1,19 @@
 ---
 import Header from './Header.astro';
 import Prompt from './Prompt.astro';
+import Command from './Command.astro';
+import WhoamiAnswer from './WhoamiAnswer.astro';
 ---
 
 <main class="terminal">
   <Header />
 
   <section class="content">
-    <Prompt />
+    <div class="prompt-command-wrapper">
+      <Prompt />
+      <Command text="whoami" />
+    </div>
+    <WhoamiAnswer />
   </section>
 </main>
 
@@ -28,8 +34,18 @@ import Prompt from './Prompt.astro';
       rgba(0, 0, 0, 0.22) 0px 15px 12px;
   }
 
+  .prompt-command-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
   .content {
-    padding: 0.2rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
     height: fit-content;
+    justify-content: flex-start;
+    padding: 0.2rem 0.5rem;
   }
 </style>
