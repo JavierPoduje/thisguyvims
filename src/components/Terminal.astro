@@ -1,7 +1,9 @@
 ---
-import Header from './Header.astro';
-import Prompt from './Prompt.astro';
+import AboutAnswer from './AboutAnswer.astro';
 import Command from './Command.astro';
+import Header from './Header.astro';
+import ProfileAnswer from './ProfileAnswer.astro';
+import Prompt from './Prompt.astro';
 import WhoamiAnswer from './WhoamiAnswer.astro';
 ---
 
@@ -9,15 +11,43 @@ import WhoamiAnswer from './WhoamiAnswer.astro';
   <Header />
 
   <section class="content">
-    <div class="prompt-command-wrapper">
-      <Prompt />
-      <Command text="whoami" />
+    <div class="command-answer-wrapper">
+      <div class="prompt-command-wrapper">
+        <Prompt />
+        <Command text="whoami" />
+      </div>
+
+      <WhoamiAnswer />
     </div>
-    <WhoamiAnswer />
+
+    <div class="command-answer-wrapper">
+      <div class="prompt-command-wrapper">
+        <Prompt />
+        <Command text="cat about.txt" />
+      </div>
+
+      <AboutAnswer />
+    </div>
+
+    <div class="command-answer-wrapper">
+      <div class="prompt-command-wrapper">
+        <Prompt />
+        <Command text="cat profile.jpg" />
+      </div>
+
+      <ProfileAnswer />
+    </div>
   </section>
 </main>
 
 <style>
+  .command-answer-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: flex-start;
+  }
+
   .terminal {
     align-items: flex-start;
     border-radius: var(--radius-l);
@@ -43,9 +73,9 @@ import WhoamiAnswer from './WhoamiAnswer.astro';
   .content {
     display: flex;
     flex-direction: column;
-    gap: 0.2rem;
+    gap: 1.4rem;
     height: fit-content;
     justify-content: flex-start;
-    padding: 0.2rem 0.5rem;
+    padding: 0.2rem 0.6rem;
   }
 </style>
