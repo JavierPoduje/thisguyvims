@@ -1,0 +1,91 @@
+---
+import { Icon } from 'astro-icon/components';
+const iconSize = 24;
+---
+
+<section class="component">
+  <p class="paragraph">
+    I used to be a musician... kinda. You can listen the stuff in which I've played going here
+  </p>
+
+  <div class="links">
+    <a
+      class="link"
+      href="https://open.spotify.com/artist/5vA7SVYlKJGW6NGkKaSEax"
+      target="_blank"
+      aria-label="Spotify link - Patio Solar">
+      <Icon
+        width={iconSize}
+        height={iconSize}
+        name="fa-brands:spotify"
+      />
+      <span class="link-text">Patio Solar</span>
+    </a>
+
+    <a
+      class="link"
+      href="https://open.spotify.com/artist/2JncMdQl5LMeSKFJ89UZ6f"
+      target="_blank"
+      aria-label="Spotify link - Yaney">
+      <Icon
+        width={iconSize}
+        height={iconSize}
+        name="fa-brands:spotify"
+      />
+      <span class="link-text">Yaney</span>
+    </a>
+
+    <a
+      class="link"
+      href="https://open.spotify.com/artist/35t8Vch6AZjIZE3CWFlw7r"
+      target="_blank"
+      aria-label="Spotify link - Emisario Greda">
+      <Icon
+        width={iconSize}
+        height={iconSize}
+        name="fa-brands:spotify"
+      />
+      <span class="link-text">Emisario Greda</span>
+    </a>
+  </div>
+</section>
+
+<style>
+  .component {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+  }
+
+  .link-text {
+  }
+
+  .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.8rem;
+    width: 100%;
+  }
+
+  .link {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 0.2rem;
+    justify-content: center;
+  }
+
+  .paragraph {
+    margin: 0 0 0.5rem;
+  }
+</style>
