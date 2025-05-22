@@ -1,0 +1,84 @@
+---
+import { Icon } from 'astro-icon/components';
+const iconSize = 24;
+---
+
+<div class="component">
+  <ul class="links">
+    <li>
+      <!-- Twitch -->
+      <a
+        href="https://twitch.tv/thisguyvims"
+        class="link"
+        target="_black"
+        aria-label="Twitch link - thisguyvims">
+        <Icon
+          name="fa6-brands:twitch"
+          width={iconSize}
+          height={iconSize}
+        />
+        <span>Twitch</span>
+      </a>
+    </li>
+
+    <li>
+      <!-- Youtube -->
+      <a
+        href="https://www.youtube.com/@thisguyvims"
+        class="link"
+        target="_black"
+        aria-label="Youtube link - thisguyvims">
+        <Icon
+          name="fa6-brands:youtube"
+          width={iconSize}
+          height={iconSize}
+        />
+        <span>YouTube</span>
+      </a>
+    </li>
+
+    <li>
+      <!-- Youtube -->
+      <a
+        href="https://www.chess.com/member/pujem"
+        class="link"
+        target="_black"
+        aria-label="Chess.com link - /pujem">
+        <Icon
+          name="chess"
+          width={iconSize}
+          height={iconSize}
+        />
+        <span>Play with me!</span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<style>
+  .component {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .links {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
+    justify-content: flex-start;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .link {
+    align-items: center;
+    display: flex;
+    gap: 0.2rem;
+    justify-content: flex-start;
+    list-style-type: none;
+  }
+</style>

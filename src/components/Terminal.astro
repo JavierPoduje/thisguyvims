@@ -1,10 +1,12 @@
 ---
 import AboutAnswer from './AboutAnswer.astro';
 import Command from './Command.astro';
+import EmptyCommand from './EmptyCommand.astro';
 import Header from './Header.astro';
 import MusicAnswer from './MusicAnswer.astro';
 import ProfileAnswer from './ProfileAnswer.astro';
 import Prompt from './Prompt.astro';
+import SocialAnswer from './SocialAnswer.astro';
 import WhoamiAnswer from './WhoamiAnswer.astro';
 ---
 
@@ -46,6 +48,22 @@ import WhoamiAnswer from './WhoamiAnswer.astro';
       </div>
 
       <MusicAnswer />
+    </div>
+
+    <div class="command-answer-wrapper">
+      <div class="prompt-command-wrapper">
+        <Prompt />
+        <Command text="ls socials" />
+      </div>
+
+      <SocialAnswer />
+    </div>
+
+    <div class="command-answer-wrapper">
+      <div class="prompt-command-wrapper">
+        <Prompt />
+        <EmptyCommand />
+      </div>
     </div>
   </section>
 </main>

@@ -1,0 +1,36 @@
+<div>
+  <div class="component">
+    <div class="ticking-square"></div>
+  </div>
+</div>
+
+<style>
+  .component {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.2rem;
+  }
+
+  .ticking-square {
+    width: 0.4rem;
+    height: 0.8rem;
+    background-color: var(--color-yellow);
+    animation: tick 0.8s infinite;
+  }
+
+  @keyframes tick {
+    0% {
+      opacity: 1;
+    }
+    49% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+</style>
