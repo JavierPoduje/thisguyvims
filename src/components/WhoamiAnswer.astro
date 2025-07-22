@@ -1,5 +1,12 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang || 'en');
+---
+
 <div class="component">
-  <h1 class="title">Hola! I'm thisguyvims</h1>
+  <h1 class="title">{t('whoami.title')}</h1>
 </div>
 
 <style>

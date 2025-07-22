@@ -1,6 +1,10 @@
 ---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
 import { Icon } from 'astro-icon/components';
+
 const iconSize = 24;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang || 'en');
 ---
 
 <div class="component">
@@ -49,7 +53,7 @@ const iconSize = 24;
           width={iconSize}
           height={iconSize}
         />
-        <span>Play with me!</span>
+        <span>{t('social.chess')}</span>
       </a>
     </li>
   </ul>

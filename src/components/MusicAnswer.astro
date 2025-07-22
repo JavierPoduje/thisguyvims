@@ -1,11 +1,15 @@
 ---
 import { Icon } from 'astro-icon/components';
 const iconSize = 24;
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang || 'en');
 ---
 
 <section class="component">
   <p class="paragraph">
-    I used to be a musician... kinda. You can listen the stuff in which I've played going here
+    {t('music.text')}
   </p>
 
   <div class="links">
