@@ -1,12 +1,19 @@
 ---
+import { getLangFromUrl } from '../i18n/utils';
 import { languages } from '../i18n/ui';
+
+const langFromUrl = getLangFromUrl(Astro.url);
 ---
 
 <ul class="component">
   {
     Object.entries(languages).map(([lang]) => (
       <li>
-        <a href={`/${lang}/`}>{lang}</a>
+        <a
+          class={'title ' + (lang === langFromUrl ? 'active' : '')}
+          href={`/${lang}/`}>
+          {lang}
+        </a>
       </li>
     ))
   }
@@ -20,5 +27,12 @@ import { languages } from '../i18n/ui';
     display: flex;
     flex-direction: row;
     justify-content: center;
+  }
+
+  .title:not(.active) {
+    color: var(--color-mauve);
+  }
+  .title.active {
+    color: var(--color-yellow);
   }
 </style>
