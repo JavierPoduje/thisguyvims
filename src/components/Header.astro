@@ -1,3 +1,7 @@
+---
+import LanguagePicker from './LanguagePicker.astro';
+---
+
 <section class="component">
   <div class="section left">
     <section class="window-controls">
@@ -6,16 +10,20 @@
       <div class="button green"></div>
     </section>
 
-    <span class="title">terminal</span>
+    <span class="title">kitty</span>
 
-    <span class="pwd">~/home/user</span>
+    <span class="pwd">~/home/thisguyvims</span>
   </div>
 
-  <div class="section right"></div>
+  <div class="section right">
+    <LanguagePicker />
+  </div>
 </section>
 
 <style>
   .component {
+    --px: 1rem;
+
     align-items: center;
     background-color: var(--color-mantle);
     border-radius: var(--radius-m);
@@ -23,8 +31,8 @@
     flex-direction: row;
     height: 1.5rem;
     justify-content: space-between;
-    padding: 0.2rem 0.5rem;
-    width: 100%;
+    padding: 0.4rem var(--px);
+    width: calc(100% - (var(--px) * 2));
     font-weight: 600;
   }
 
@@ -66,6 +74,7 @@
   .button {
     border-radius: var(--radius-full);
     border: 1px solid rgba(0, 0, 0, 0.2);
+    cursor: pointer;
     height: 0.6rem;
     width: 0.6rem;
   }

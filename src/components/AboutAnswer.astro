@@ -1,11 +1,18 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang || 'en');
+---
+
 <ul class="component">
   <li>
     <span>
-      I'm a software engineer working at
+      {t('whoami')}
       <a
         target="_blank"
         href="https://www.chess.com">
-        chess.com
+        {t('chesscom')}
       </a>
     </span>
   </li>
