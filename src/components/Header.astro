@@ -58,6 +58,7 @@ import LanguagePicker from './LanguagePicker.astro';
 
   .pwd {
     color: var(--color-blue);
+    display: none;
   }
 
   .window-controls {
@@ -87,5 +88,11 @@ import LanguagePicker from './LanguagePicker.astro';
 
   .button.green {
     background-color: var(--color-green);
+  }
+
+  @media (min-width: 420px) {
+    .pwd {
+      display: block;
+    }
   }
 </style>

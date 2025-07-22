@@ -85,7 +85,8 @@ import WhoamiAnswer from './WhoamiAnswer.astro';
     grid-column: 2;
     justify-content: flex-start;
     overflow: hidden;
-    width: 46rem;
+    width: 100%;
+    min-width: 19rem;
     background-color: var(--color-base);
     box-shadow:
       rgba(0, 0, 0, 0.3) 0px 19px 38px,
@@ -105,5 +106,11 @@ import WhoamiAnswer from './WhoamiAnswer.astro';
     height: fit-content;
     justify-content: flex-start;
     padding: 1rem 0.8rem;
+  }
+
+  @media (min-width: 760px) {
+    .terminal {
+      width: 46rem;
+    }
   }
 </style>

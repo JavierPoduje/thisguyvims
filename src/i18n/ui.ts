@@ -16,7 +16,6 @@ export const ui = {
     "music.text": "I used to be a musician... kinda. You can listen the stuff in which I've played going here",
     "social.chess": "Play with me!",
     "profile.alt": "Image of me",
-    "header.path": "~/home/thisguyvims"
   },
 
   es: {
@@ -28,7 +27,6 @@ export const ui = {
     "music.text": "Solía ser músico... más o menos. Puedes escuchar las cosas en las que he tocado yendo aquí",
     "social.chess": "¡Juega conmigo!",
     "profile.alt": "Imagen de mí",
-    "header.path": "~/home/thisguyvims"
   },
 
   ca: {
@@ -40,6 +38,5 @@ export const ui = {
     "music.text": "Solia ser músic... si fa no fa. Pots escoltar les coses en què he tocat anant aquí",
     "social.chess": "Juga amb mi!",
     "profile.alt": "Imatge de mi",
-    "header.path": "~/home/thisguyvims"
   },
 } as const;
