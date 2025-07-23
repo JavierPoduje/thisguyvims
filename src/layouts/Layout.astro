@@ -1,4 +1,5 @@
 ---
+import Analytics from '@vercel/analytics/astro';
 import Particles from '../components/Particles.astro';
 import { getLangFromUrl } from '../i18n/utils';
 
@@ -48,6 +49,7 @@ const lang = getLangFromUrl(Astro.url);
       content={Astro.generator}
     />
     <title>thisguyvims</title>
+    <Analytics />
   </head>
   <body>
     <Particles />
